@@ -3,6 +3,20 @@
  */
 public class LeapYear {
 
+    /** 存在2种情况是闰年 整除400 或者 整除4不被100整除
+     *  参数 year
+     */
+    private static boolean isLeapYear(int year) {
+        if (year % 400 == 0) {
+            return true;
+        } else if (year % 4 == 0 && year % 100 != 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
     /** Calls isLeapYear to print correct statement.
      *  @param  year to be analyzed
      */
